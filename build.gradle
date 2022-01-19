@@ -29,18 +29,3 @@ dependencies {
 test {
 	useJUnitPlatform()
 }
-
-mainClassName = 'com.example.onesneakers.OnesneakersApplication'
-
-task fatJar(type: Jar) {
-	bootJar {
-		launchScript()
-	}
-	manifest {
-		attributes 'Main-Class': "${mainClassName}"
-		duplicatesStrategy = 'include'
-	}
-	archiveBaseName = "onesneakers"
-	from { configurations.compileClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
-	with jar
-}
