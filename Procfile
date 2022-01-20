@@ -1,1 +1,1 @@
-web: java -jar build/libs/onesneakers-api.jar --spring.profiles.active=production
+web: java -jar build/libs/onesneakers-api.jar
