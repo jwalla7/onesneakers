@@ -8,7 +8,7 @@ plugins {
 
 group = 'com.example'
 version = 'api'
-sourceCompatibility = '17'
+sourceCompatibility = '11'
 
 repositories {
 	mavenCentral()
