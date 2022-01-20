@@ -20,36 +20,44 @@ import java.util.List;
         @Autowired
         private sneakersservice sneakerService;
 
-        //  Get All Sneakers
+        //  GET All Sneakers
         @GetMapping("/sneakers")
         public ResponseEntity<List<sneakersentity>> getSneakers() {
             return new ResponseEntity<>(sneakerService.getSneakers(), HttpStatus.OK);
         }
 
-        //  Get Sneakers by Brand
+        //  GET Sneakers by Brand
         @GetMapping("/sneakers/brand")
         public ResponseEntity<List<sneakersentity>> findByBrandName(@RequestParam("brand") String brandName) {
             return new ResponseEntity<>(sneakersrepository.findByBrandName(brandName), HttpStatus.OK);
         }
 
-        //  Get Sneakers by Price
+        //  GET Sneakers by Price
         @GetMapping("/sneakers/listing-price")
         public ResponseEntity<List<sneakersentity>> findByPrice(@RequestParam ("listing-price") int price) {
             return new ResponseEntity<>(sneakersrepository.findByPrice(price), HttpStatus.OK);
         }
 
-        // Get Sneaker by Id
+        // GET Sneaker by Price Less Than
+        @GetMapping("/sneakers/listing-price-lessthan")
+        public ResponseEntity<List<sneakersentity>> findByPriceLessThan(@RequestParam ("listing-price-lessthan") int price) {
+            return new ResponseEntity<>(sneakersrepository.findByPriceLessThan(price), HttpStatus.OK);
+        }
+
+
+        // GET Sneaker by Id
         @GetMapping("/sneakers/{id}")
         public ResponseEntity<sneakersentity> getSneaker(@PathVariable int id) {
             return new ResponseEntity<>(sneakerService.getSneaker(id), HttpStatus.OK);
         }
 
-        //  Get Sneaker by Brand then Name
+        //  GET Sneaker by Brand then Name
         @GetMapping("/sneakers/brandandname")
         public ResponseEntity<List<sneakersentity>> findByBrandNameAndSneakerName(@RequestParam ("brand") String brandName,
                                                                                   @RequestParam ("name") String sneakerName) {
             return new ResponseEntity<> (sneakersrepository.findByBrandNameAndSneakerName(brandName, sneakerName), HttpStatus.OK);
         }
+
         //  POST Create Sneaker
         @PostMapping("/admin/manager/products")
         public ResponseEntity<sneakersentity> saveSneaker (@Valid @RequestBody sneakersentity sneaker) {

@@ -13,4 +13,6 @@ public interface sneakersrepository extends CrudRepository<sneakersentity, Integ
     List<sneakersentity> findByBrandNameAndSneakerName(String brandName, String sneakerName);
 
     List<sneakersentity> findByPrice(int price);
+
+    List<sneakersentity> findByPriceLessThan(int price);
 }
