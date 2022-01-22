@@ -44,14 +44,13 @@ import java.util.List;
             return new ResponseEntity<>(sneakersrepository.findByPriceLessThan(price), HttpStatus.OK);
         }
 
-
         // GET Sneaker by Id
         @GetMapping("/sneakers/{id}")
         public ResponseEntity<sneakersentity> getSneaker(@PathVariable int id) {
             return new ResponseEntity<>(sneakerService.getSneaker(id), HttpStatus.OK);
         }
 
-        //  GET Sneaker by Brand then Name
+        //  GET Sneaker by Brand and Name
         @GetMapping("/sneakers/brandandname")
         public ResponseEntity<List<sneakersentity>> findByBrandNameAndSneakerName(@RequestParam ("brand") String brandName,
                                                                                   @RequestParam ("name") String sneakerName) {
