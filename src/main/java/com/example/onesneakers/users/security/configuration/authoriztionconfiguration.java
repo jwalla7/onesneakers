@@ -37,7 +37,7 @@ public class authoriztionconfiguration extends WebSecurityConfigurerAdapter {
 //                .and()
 //                .formLogin()
 //                .and()
-//                .customerDetalsService(uds)
+//                .customerDetailsService(uds)
 //                .exceptionHandling()
 //                .authenticationEntryPoint((request, response, authException) -> response.sendError(HttpServletResponse.SC_UNAUTHORIZED, "Unauthorized")
 //                )
