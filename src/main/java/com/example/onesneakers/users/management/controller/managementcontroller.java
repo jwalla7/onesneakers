@@ -3,6 +3,7 @@ package com.example.onesneakers.users.management.controller;
 import com.example.onesneakers.users.management.entity.managemententity;
 import com.example.onesneakers.users.management.repository.managementrepository;
 import com.example.onesneakers.users.management.service.managementservice;
+import com.example.onesneakers.users.security.model.managementmodel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -42,11 +43,10 @@ public class managementcontroller {
     }
 
     @PostMapping("/login/register")
-//    @Valid, validates post data from user before if binds to Management object
-    public ResponseEntity<managemententity> saveManager (@Valid @RequestBody managemententity manager) {
+    public ResponseEntity<managemententity> saveManager (@Valid @RequestBody managementmodel managementmodel) {
         managemententity newManager = new managemententity();
-        newManager.setEmail(manager.getEmail());
-        newManager.setPassword(usepasswordencoder.encode(manager.getPassword()));
+        newManager.setEmail(managementmodel.getEmail());
+        newManager.setPassword(usepasswordencoder.encode(managementmodel.getPassword()));
         return new ResponseEntity<>(usemanagementrepository.save(newManager), HttpStatus.CREATED);
 //        return new ResponseEntity<>(managerService.saveManager(manager), HttpStatus.CREATED);
     }
