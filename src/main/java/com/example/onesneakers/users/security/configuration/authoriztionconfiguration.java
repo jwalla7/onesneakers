@@ -1,5 +1,8 @@
 package com.example.onesneakers.users.security.configuration;
 
+import com.example.onesneakers.users.security.service.customerdetailsservice;
+import com.example.onesneakers.users.security.service.managmentdetailsservice;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -14,6 +17,12 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 @Configuration
 //@EnableWebSecurity
 public class authoriztionconfiguration extends WebSecurityConfigurerAdapter {
+
+
+    @Autowired private customerdetailsservice customerdetailsservice;
+    @Autowired private managmentdetailsservice managementdetailsservice;
+
+
 
 //        @Override
 //        protected void configure(HttpSecurity http) throws Exception {
@@ -65,12 +74,13 @@ public class authoriztionconfiguration extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        InMemoryUserDetailsManager userDetailsService = new InMemoryUserDetailsManager();
-        UserDetails user1 = User.withUsername("jamal").password("123").authorities("admin").build();
-        UserDetails user2 = User.withUsername("lisa").password("123").authorities("admin").build();
-        userDetailsService.createUser(user1);
-        userDetailsService.createUser(user2);
-        auth.userDetailsService(userDetailsService);
+//        InMemoryUserDetailsManager userDetailsService = new InMemoryUserDetailsManager();
+//        UserDetails user1 = User.withUsername("jamal").password("123").authorities("admin").build();
+//        UserDetails user2 = User.withUsername("lisa").password("123").authorities("admin").build();
+//        userDetailsService.createUser(user1);
+//        userDetailsService.createUser(user2);
+        auth.userDetailsService(customerdetailsservice).passwordEncoder(passwordEncoder());
+        auth.userDetailsService(managementdetailsservice).passwordEncoder(passwordEncoder());
     }
 
     @Bean

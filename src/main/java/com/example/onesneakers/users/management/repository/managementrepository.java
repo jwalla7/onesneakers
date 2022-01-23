@@ -1,10 +1,12 @@
 package com.example.onesneakers.users.management.repository;
 
 import com.example.onesneakers.users.management.entity.managemententity;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-@Repository
-public interface managementrepository extends CrudRepository<managemententity, Integer> {
+import java.util.Optional;
 
+@Repository
+public interface managementrepository extends JpaRepository<managemententity, Integer> {
+    Optional<managemententity> findByEmail(String email);
 }

@@ -1,6 +1,7 @@
 package com.example.onesneakers.users.customers.entity;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
@@ -14,12 +15,13 @@ import java.util.Date;
 @Entity
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "CUSTOMERS")
 public class customerentity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int customerId;
 
     @NotBlank(message = "Name is required")
     @Column(name = "FULL_NAME")
