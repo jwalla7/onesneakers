@@ -1,6 +1,7 @@
 package com.example.onesneakers.users.management.controller;
 
 import com.example.onesneakers.users.management.entity.managemententity;
+import com.example.onesneakers.users.management.repository.managementrepository;
 import com.example.onesneakers.users.management.service.managementservice;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -17,6 +18,7 @@ import java.util.List;
 public class managementcontroller {
 
     @Autowired private managementservice managerService;
+    @Autowired private managementrepository usemanagementrepository;
     @Autowired private PasswordEncoder usepasswordencoder;
 
     @GetMapping("/login")

@@ -55,8 +55,8 @@ public class authoriztionconfiguration extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 .antMatchers("/admin/manager/login/**").permitAll()
                 .antMatchers("/customer/account/login/**").permitAll()
-                .antMatchers("/admin/manager/myaccess/**").authenticated()
-                .antMatchers("/customer/account/myaccount/**").authenticated()
+//                .antMatchers("/admin/manager/myaccess/**").authenticated()
+//                .antMatchers("/customer/account/myaccount/**").authenticated()
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()
@@ -66,9 +66,8 @@ public class authoriztionconfiguration extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-
-        auth.userDetailsService(customerdetailsservice).passwordEncoder(passwordEncoder());
         auth.userDetailsService(managementdetailsservice).passwordEncoder(passwordEncoder());
+        auth.userDetailsService(customerdetailsservice).passwordEncoder(passwordEncoder());
     }
 
     @Bean
