@@ -47,7 +47,7 @@ public class managementcontroller {
         managemententity newManager = new managemententity();
         newManager.setEmail(manager.getEmail());
         newManager.setPassword(usepasswordencoder.encode(manager.getPassword()));
-        return new ResponseEntity<>(managerService.saveManager(manager), HttpStatus.CREATED);
+        return new ResponseEntity<>(managerService.saveManager(newManager), HttpStatus.CREATED);
     }
 
     @PutMapping("/myaccess/{id}")
