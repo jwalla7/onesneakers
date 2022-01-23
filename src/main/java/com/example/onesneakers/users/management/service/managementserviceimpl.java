@@ -2,6 +2,7 @@ package com.example.onesneakers.users.management.service;
 
 import com.example.onesneakers.users.management.entity.managemententity;
 import com.example.onesneakers.users.management.repository.managementrepository;
+import com.example.onesneakers.users.security.model.managementmodel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

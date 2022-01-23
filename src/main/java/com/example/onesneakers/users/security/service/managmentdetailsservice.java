@@ -1,6 +1,5 @@
 package com.example.onesneakers.users.security.service;
 
-import com.example.onesneakers.users.customers.entity.customerentity;
 import com.example.onesneakers.users.management.entity.managemententity;
 import com.example.onesneakers.users.management.repository.managementrepository;
 import org.springframework.beans.factory.annotation.Autowired;

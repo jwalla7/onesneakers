@@ -7,7 +7,6 @@ import com.example.onesneakers.users.security.model.managementmodel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.userdetails.User;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
@@ -24,12 +23,12 @@ public class managementcontroller {
 
     @GetMapping("/login")
     public String managerlogin() {
-        return "Manager main";
+        return "Manager main content, permit all";
     }
 
     @GetMapping("/myaccess")
     public String manageraccount() {
-        return "Manager access content";
+        return "Manager access content, authentication only";
     }
 
     @GetMapping("/data")
@@ -42,13 +41,14 @@ public class managementcontroller {
         return new ResponseEntity<>(managerService.getManager(id), HttpStatus.OK);
     }
 
-    @PostMapping("/login/register")
-    public ResponseEntity<managemententity> saveManager (@Valid @RequestBody managementmodel managementmodel) {
+    @PostMapping("/register")
+    public managemententity createManager (@Valid @RequestBody managementmodel managementmodel) {
         managemententity newManager = new managemententity();
+        newManager.setFullName(managementmodel.getFullName());
+        newManager.setUsername(managementmodel.getUsername());
         newManager.setEmail(managementmodel.getEmail());
         newManager.setPassword(usepasswordencoder.encode(managementmodel.getPassword()));
-        return new ResponseEntity<>(usemanagementrepository.save(newManager), HttpStatus.CREATED);
-//        return new ResponseEntity<>(managerService.saveManager(manager), HttpStatus.CREATED);
+        return usemanagementrepository.save(newManager);
     }
 
     @PutMapping("/myaccess/{id}")
