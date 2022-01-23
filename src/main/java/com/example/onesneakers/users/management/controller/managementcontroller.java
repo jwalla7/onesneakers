@@ -19,6 +19,16 @@ public class managementcontroller {
     @Autowired private managementservice managerService;
     @Autowired private PasswordEncoder usepasswordencoder;
 
+    @GetMapping("/login")
+    public String managerlogin() {
+        return "Manager main";
+    }
+
+    @GetMapping("/myaccess")
+    public String manageraccount() {
+        return "Manager access content";
+    }
+
     @GetMapping("/data")
     public ResponseEntity<List<managemententity>> getManagers() {
         return new ResponseEntity<List<managemententity>>((List<managemententity>) managerService.getManagers(), HttpStatus.OK);
@@ -34,7 +44,6 @@ public class managementcontroller {
     public ResponseEntity<managemententity> saveManager (@Valid @RequestBody managemententity manager) {
         managemententity newManager = new managemententity();
         newManager.setEmail(manager.getEmail());
-        newManager.setUsername(manager.getUsername());
         newManager.setPassword(usepasswordencoder.encode(manager.getPassword()));
         return new ResponseEntity<>(managerService.saveManager(manager), HttpStatus.CREATED);
     }
