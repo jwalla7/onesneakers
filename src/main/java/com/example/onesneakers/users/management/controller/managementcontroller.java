@@ -33,7 +33,7 @@ public class managementcontroller {
 
     @GetMapping("/data")
     public ResponseEntity<List<managemententity>> getManagers() {
-        return new ResponseEntity<List<managemententity>>((List<managemententity>) managerService.getManagers(), HttpStatus.OK);
+        return new ResponseEntity<>((List<managemententity>) managerService.getManagers(), HttpStatus.OK);
     }
 
     @GetMapping("/myaccess/{id}")
