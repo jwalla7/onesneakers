@@ -9,4 +9,5 @@ import java.util.Optional;
 @Repository
 public interface managementrepository extends JpaRepository<managemententity, Integer> {
     Optional<managemententity> findByEmail(String email);
+//    Optional<managemententity> findByUsername(String username);
 }
