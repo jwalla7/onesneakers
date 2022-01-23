@@ -51,8 +51,8 @@ public class authoriztionconfiguration extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                .antMatchers("/admin/manager/login").permitAll()
-                .antMatchers("/customer/account/login").permitAll()
+                .antMatchers("/admin/manager/login/**").permitAll()
+                .antMatchers("/customer/account/login/**").permitAll()
                 .antMatchers("/admin/manager/myaccess/**").authenticated()
                 .antMatchers("/customer/account/myaccount/**").authenticated()
                 .and()
@@ -74,11 +74,7 @@ public class authoriztionconfiguration extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-//        InMemoryUserDetailsManager userDetailsService = new InMemoryUserDetailsManager();
-//        UserDetails user1 = User.withUsername("jamal").password("123").authorities("admin").build();
-//        UserDetails user2 = User.withUsername("lisa").password("123").authorities("admin").build();
-//        userDetailsService.createUser(user1);
-//        userDetailsService.createUser(user2);
+
         auth.userDetailsService(customerdetailsservice).passwordEncoder(passwordEncoder());
         auth.userDetailsService(managementdetailsservice).passwordEncoder(passwordEncoder());
     }

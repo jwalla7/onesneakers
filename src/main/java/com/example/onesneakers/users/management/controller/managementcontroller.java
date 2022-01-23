@@ -11,35 +11,35 @@ import javax.validation.Valid;
 import java.util.List;
 
 @RestController
-@RequestMapping("/admin/login")
+@RequestMapping("/admin/manager")
 public class managementcontroller {
 
     @Autowired
     private managementservice managerService;
 
-    @GetMapping("/user")
+    @GetMapping("/data")
     public ResponseEntity<List<managemententity>> getManagers() {
         return new ResponseEntity<List<managemententity>>((List<managemententity>) managerService.getManagers(), HttpStatus.OK);
     }
 
-    @GetMapping("/user/{id}")
+    @GetMapping("/myaccess/{id}")
     public ResponseEntity<managemententity> getManager(@PathVariable int id) {
         return new ResponseEntity<>(managerService.getManager(id), HttpStatus.OK);
     }
 
-    @PostMapping("/register")
+    @PostMapping("/login/register")
 //    @Valid, validates post data from user before if binds to Management object
     public ResponseEntity<managemententity> saveManager (@Valid @RequestBody managemententity manager) {
         return new ResponseEntity<>(managerService.saveManager(manager), HttpStatus.CREATED);
     }
 
-    @PutMapping("user/{id}")
+    @PutMapping("/myaccess/{id}")
     public ResponseEntity<managemententity> updateManager(@PathVariable int id, @Valid @RequestBody managemententity manager) {
         manager.setManagerId(id);
         return new ResponseEntity<>(managerService.updateManager(manager), HttpStatus.OK);
     }
 
-    @DeleteMapping("/user")
+    @DeleteMapping("/myaccess")
     public void deleteManager(@RequestParam int id) {
         managerService.deleteManager(id);
     }

@@ -12,8 +12,10 @@ public class managementsecuritycontroller {
     public String managerlogin() {
         return "Manager main";
     }
+
     @GetMapping("/myaccess")
     public String manageraccount() {
         return "Manager access content";
     }
+
 }
