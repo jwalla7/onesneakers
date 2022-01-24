@@ -32,11 +32,11 @@ public class managemententity {
     private String fullName;
 
     @Email(message = "Valid email is required")
-    @Column(name = "EMAIL")
+    @Column(name = "EMAIL", unique = true)
     private String email;
 
     @NotBlank(message = "Username is required")
-    @Column(name = "USERNAME")
+    @Column(name = "USERNAME", unique = true)
     private String username;
 
 //    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
