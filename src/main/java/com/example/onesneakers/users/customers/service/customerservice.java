@@ -2,9 +2,11 @@ package com.example.onesneakers.users.customers.service;
 
 import com.example.onesneakers.users.customers.entity.customerentity;
 
+import java.util.List;
+
 public interface customerservice {
 
-    Iterable<customerentity> getCustomers();
+    List<customerentity> getCustomers();
 
     customerentity getCustomer(int id);
 

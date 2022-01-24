@@ -3,7 +3,7 @@ package com.example.onesneakers.users.customers.controller;
 import com.example.onesneakers.users.customers.entity.customerentity;
 import com.example.onesneakers.users.customers.repository.customerrepository;
 import com.example.onesneakers.users.customers.service.customerservice;
-import com.example.onesneakers.users.security.model.managementmodel;
+import com.example.onesneakers.users.security.model.customermodel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -42,7 +42,7 @@ public class customercontroller {
     }
 
     @PostMapping("/register")
-    public customerentity createCustomer (@Valid @RequestBody managementmodel customermodel) {
+    public customerentity createCustomer (@Valid @RequestBody customermodel customermodel) {
         customerentity newCustomer = new customerentity();
         newCustomer.setFullName(customermodel.getFullName());
         newCustomer.setUsername(customermodel.getUsername());
