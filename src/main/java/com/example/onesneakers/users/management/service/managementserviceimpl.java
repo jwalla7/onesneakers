@@ -10,8 +10,7 @@ import java.util.Optional;
 @Service
 public class managementserviceimpl implements managementservice {
 
-    @Autowired
-    private managementrepository usemanagementrepository;
+    @Autowired private managementrepository usemanagementrepository;
 
     @Override
     public Iterable<managemententity> getManagers() {

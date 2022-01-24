@@ -5,17 +5,15 @@ import com.example.onesneakers.users.customers.repository.customerrepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 import java.util.Optional;
 
 @Service
 public class customerserviceimpl implements customerservice {
 
-    @Autowired
-    private customerrepository usecustomerrepository;
+    @Autowired private customerrepository usecustomerrepository;
 
     @Override
-    public List<customerentity> getCustomers() {
+    public Iterable<customerentity> getCustomers() {
         return usecustomerrepository.findAll();
     }
 
