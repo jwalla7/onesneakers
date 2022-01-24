@@ -33,6 +33,7 @@ public class authorizationconfiguration extends WebSecurityConfigurerAdapter {
                         "/admin/manager/data",
                         "/admin/manager/login/**",
                         "/admin/manager/register/**",
+                        "/customer/account/data",
                         "/customer/account/login/**",
                         "/customer/account/register/**"
                 ).permitAll()
