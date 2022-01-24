@@ -1,0 +1,1042 @@
+/*
+::
+::::::::::::::::::::::::::::::::::::::::::::::::
+PAGE DEFAULT SETTINGS | Please do not edit these Blocks
+::::::::::::::::::::::::::::::::::::::::::::::::
+:: 
+*/
+/* ------ Browser CSS Reset ------*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    scroll-behavior: smooth;
+}
+    /* Older Browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* ------ Page Layout Default ------ */
+html {
+    /* Layout */
+    /* scroll-padding-top: var(--top-spacing); */
+    /* Scrollbar Jumps */
+    /* margin-left: calc(100vw - 100%); */
+    /* margin-right: 0; */
+    /* Position */
+
+    /* Background */
+    background-color: white;
+    /* Border */
+    /* Font */
+}
+* {
+    /* Layout */
+    max-width: 100%;
+    /* Position */
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    box-sizing: border-box;
+    /* Background */
+    /* Border */
+    /* Font */
+}
+
+/* ------ Body Default ------ */
+body {
+    /* Layout */
+    /* Position */
+    width: 100vw;
+    height: auto;
+    /* overflow-x: hidden; */
+    /* scroll-behavior: var(--top-spacing); */
+    /* Background */
+    /* background-color: white; */
+    /* Border */
+    /* Font */
+}
+
+
+/* ------ Footer Default ------ */
+footer {
+    /* Layout */
+    /* z-index: 1; */
+    /* transform: translateY(-169%); */
+    /* Position */
+    width: 100vw;
+    height: 100vh;
+    /* Background */
+    background-color: black;
+    /* Border */
+    /* Font */
+}
+
+
+
+
+
+
+
+
+/*  ---------- KEYFRAMES ---------- */
+@keyframes slide-in-left { 
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-right {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-bottom {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-top {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+
+
+
+
+
+
+/*
+::
+::::::::::::::::::::::::::::::::::::::::::::::::
+------------- DEFAULT FONTS -------------------------
+::::::::::::::::::::::::::::::::::::::::::::::::
+::
+*/
+
+@font-face {
+    font-family: 'dharma_gothic_ebold','dharma_gothic_eexbold',
+                'dharma_gothic_eheavy','dharma_gothic_eregular',
+                'black_signature_personal_usRg','taken_by_vultures_demoregular',
+                'ballastregular','authenticsignature','masqueregular','porterbold_demo',
+                'quartzo_demobold','galderglynn_titlingregular',
+                'noviembre29heavy','impactregular';
+
+    src: url('dharmagothice_bold_r-webfont.woff2') format('woff2'),
+        url('dharmagothice_bold_r-webfont.woff') format('woff'),
+        url('dharmagothice_exbold_r-webfont.woff2') format('woff2'),
+        url('dharmagothice_exbold_r-webfont.woff') format('woff'),
+        url('dharmagothice_heavy_r-webfont.woff2') format('woff2'),
+        url('dharmagothice_heavy_r-webfont.woff') format('woff'),
+        url('dharmagothice_regular_r-webfont.woff2') format('woff2'),
+        url('dharmagothice_regular_r-webfont.woff') format('woff'),
+        url('blacksignature_personal_use_only-webfont.woff2') format('woff2'),
+        url('blacksignature_personal_use_only-webfont.woff') format('woff'),
+        url('taken_by_vultures_demo-webfont.woff2') format('woff2'),
+        url('taken_by_vultures_demo-webfont.woff') format('woff'),
+        url('ballast-webfont.woff2') format('woff2'),
+        url('ballast-webfont.woff') format('woff'),
+        url('authentic_signature-webfont.woff2') format('woff2'),
+        url('authentic_signature-webfont.woff') format('woff'),
+        url('masque__-webfont.woff2') format('woff2'),
+        url('masque__-webfont.woff') format('woff'),
+        url('porter_bold-webfont.woff2') format('woff2'),
+        url('porter_bold-webfont.woff') format('woff'),
+        url('quartzo__personal_use_only-webfont.woff2') format('woff2'),
+        url('quartzo__personal_use_only-webfont.woff') format('woff'),
+        url('galderglynn_titling_rg-webfont.woff2') format('woff2'),
+        url('galderglynn_titling_rg-webfont.woff') format('woff'),
+        url('noviembre29-webfont.woff2') format('woff2'),
+        url('noviembre29-webfont.woff') format('woff'),
+        url('impact-webfont.woff2') format('woff2'),
+        url('impact-webfont.woff') format('woff');
+
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+
+
+
+
+
+/*
+::
+::::::::::::::::::::::::::::::::::::::::::::::::
+------------- DEFAULT HEADER CONTAINER -------------
+::::::::::::::::::::::::::::::::::::::::::::::::
+::
+*/
+
+.header-Container {
+    /* Layout */
+    max-width: 100%;
+    height: 9.5vh;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    /* Position */
+    position: fixed;
+    /* Background */
+    /* background-color: red; */
+    /* Border */
+    /* Font */
+}
+
+/*  ------ NAVBAR CONTAINER TOP------ */
+
+#navBar_Container {
+    /* Layout */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 9.5vh;
+    /* Position */
+    position: fixed;
+    /* Background */
+    /* background-color: rgb(255, 255, 255); */
+    /* Border */
+    border-bottom: 2px solid black;
+    /* border-bottom: .25px solid rgba(255, 255, 255, 0.25); */
+    /* Font */
+}
+
+.navBar-ContainerS2 {
+    /* z-index: 2; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 9.5vh;
+    /* background-color: white; */
+    /* border: 2px solid red; */
+    /* border-bottom: 2px solid black; */
+}
+
+/*  ------ NAVBAR LOGO ------ */
+#logo_Container {
+    /* Layout */
+    display: inline-block;
+    width: 6.45vw;
+    height: 9.5vh;
+    /* Position */
+    position: absolute;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* Background */
+    /* background-color: transparent; */
+    /* background-color: rgb(255, 255, 255); */
+    /* border: 2px solid black */
+    /* border: .25px solid rgba(255, 255, 255, 0.25); */
+    /* Border */
+    /* Font */
+    color: white;
+}
+.logo-text-top-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10vw;
+    height: 4.85vw;
+    padding: 2.8%;
+}
+.logo-text-top {
+    font-family: 'dharma_gothic_eheavy','dharma_gothic_ebold','dharma_gothic_eexbold';
+    font-size: 525%;
+    color: black;
+} 
+.logo-long-text-container {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1vw;
+    height: 6vw;
+    padding: 8% 2% 8% 2%;
+    transform: translate(250%, 0%);
+}
+.logo-long-text-letter {
+    font-family: 'dharma_gothic_ebold','dharma_gothic_eexbold', sans-serif;
+    font-size: 155%;
+    color: black; 
+}
+
+
+
+/*  ------ NAVBAR LINKS ------ */
+#navBar_LinkContainerS2 {
+    /* Layout */
+    width: 94.38vw;
+    height: 10.5vh;
+    transform: translate(0%, 0%);
+    /* Position */
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: start;
+    align-items: center;
+    justify-content: center;
+    /* Background */
+    /* background-color: tomato; */
+    /* Border */
+    /* border: 2px solid blue; */
+    /* Font */
+}
+
+#navBar_LinkWrapperS2 {
+    /* Layout */
+    display: inline-flex;
+    column-gap: 1.5%;
+    width: 50vw;
+    height: 9.5vh;
+    /* Position */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translate(16.5%, -11.5%);
+    text-align: start;
+    align-items: center;
+    justify-content: start;
+    /* Background */
+    /* background-color: paleturquoise; */
+    /* Border */
+    /* border: 2px dotted red; */
+    /* Font */
+}
+
+#navBar_LinkWrapperSVec {
+    /* Layout */
+    display: inline-flex;
+    column-gap: 10%;
+    padding: 1.5%;
+    width: 20vw;
+    height: 9.5vh;
+    /* Position */
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(25%, -7%);
+    text-align: right;
+    /* align-items: right;
+    justify-content: right; */
+    /* Background */
+    /* background-color: royalblue; */
+    /* Border */
+    /* border: 2px dotted red; */
+    /* Font */
+}
+
+#navBar_LinkS3 {
+    fill: black;
+}
+#navBar_LinkS3a {
+    fill: black;
+}
+#navBar_LinkS3b {
+    fill: black;
+}
+#navBar_LinkS3c {
+    fill: black;
+}
+
+#navBar_LinkS2 {
+    /* Layout */
+    /* Position */
+    /* Background */
+    /* Border */
+    /* border: 2px dotted lawngreen; */
+    /* Font */
+    font-family: 'dharma_gothic_eregular','quartzo_demobold', sans-serif;
+    font-weight: lighter;
+    font-size: 90%;
+    letter-spacing: 2.5px;
+    text-decoration: none;
+    color: black;
+}
+#navBar_LinkS2a {
+    /* Layout */
+    /* Position */
+    /* Background */
+    /* Border */
+    /* border: 2px dotted lawngreen; */
+    /* Font */
+    font-family: 'dharma_gothic_eregular','quartzo_demobold', sans-serif;
+    font-weight: lighter;
+    font-size: 90%;
+    letter-spacing: 2.5px;
+    text-decoration: none;
+    color: black;
+}
+#navBar_LinkS2b {
+    /* Layout */
+    /* Position */
+    /* Background */
+    /* Border */
+    /* border: 2px dotted lawngreen; */
+    /* Font */
+    font-family: 'dharma_gothic_eregular','quartzo_demobold', sans-serif;
+    font-weight: lighter;
+    font-size: 90%;
+    letter-spacing: 2.5px;
+    text-decoration: none;
+    color: black;
+}
+#navBar_LinkS3 {
+    /* Layout */
+    /* Position */
+    /* Background */
+    /* Border */
+    /* border: 2px dotted lawngreen; */
+    /* Font */
+    /* font-size: 95%; */
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+/*
+::
+::::::::::::::::::::::::::::::::::::::::::::::::
+------------- DEFAULT BODY CONTAINER -------------
+::::::::::::::::::::::::::::::::::::::::::::::::
+::
+*/
+/* ------ BODY CONTAINER ------ */
+.root-container {
+    width: 100vw;
+    height: auto;
+}
+.shop-all-header-container {
+    width: 10.16vw;
+    height: 2vh;
+    /* border: 1px solid orange; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(29%, 6.5em);
+    text-align: left;
+}
+.shop-all-text {    
+    font-family: 'dharma_gothic_eregular','quartzo_demobold', sans-serif;
+    font-weight: lighter;
+    font-size: 90%;
+    letter-spacing: 2.5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+}
+
+.selected-sneaker-display-container {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 75vw;
+    height: 48vh;
+    transform: translate(17.5%, 25%);
+    /* border: 1px solid black; */
+    background-color: white;
+    overflow-y: hidden ;
+}
+.selected-sneaker-display-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transform: translate(80%, -21%);
+    width: auto;
+    height: 29.5vw; 
+}
+.lower-search-container{
+    width: 95.5vw;
+    height: 40vh;
+    /* border: 1px solid purple; */
+    /* border-top: 1px solid black; */
+    transform: translate(1.9%, 145%);
+    overflow-y: scroll;
+    padding: 1.5% 0 1.5% 0;
+    position: fixed;
+    top: 0;
+    display: flex;
+}
+.navigation-left-container{
+    width: 11.3vw;
+    height: 36.75vh;
+    /* border: 1px solid blue; */
+    position: sticky;
+    top:-7%;
+    margin: 0% 0 -2% 0;
+    text-align: left;
+    padding: 0 .1% 0 .1%;
+}
+.top-filter-search-container{
+    width: 11vw;
+    height: 18.25vh;
+    right: 0;
+    text-align: right;
+    /* border: 1px solid orange; */
+    padding: 2%;
+    display: flex;
+}
+.top-filter-search-left-container {
+    width: 5.5vw;
+    height: 17vh;
+    /* border: 1px solid blue; */
+    padding: 1%;
+    margin: -5.5% 0 0 0;
+    animation-play-state: paused;
+    animation: slide-in-left .55s ease-in ;
+    visibility: hidden;
+}
+.top-filter-text-container {
+    width: 5.25vw;
+    height: 3vh;
+    border: 1px solid black;
+    margin: 3.5% 0 0 0;
+    text-align: center;
+}.top-filter-text-container:hover {
+    cursor: crosshair;
+}
+.top-filter-text-container-active {
+    width: 5.25vw;
+    height: 3vh;
+    background-color: black;
+    padding: 2.5%;
+    margin: 3.5% 0 0 0;
+    text-align: center;
+}.top-filter-text-container-active:hover {
+    background-color: rgba(0, 0, 0, 0.898);
+}
+.top-filter-search-right-container {
+    width: 5.5vw;
+    height: 17vh;
+    /* border: 1px solid aqua; */
+    padding: 1%;
+    margin: -5.5% 0 0 0;
+}
+.filter-text{
+    font-family: 'dharma_gothic_eregular','quartzo_demobold', sans-serif;
+    font-weight: lighter;
+    font-size: 90%;
+    letter-spacing: 2.5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+}
+.filter-text-active{
+    font-family: 'dharma_gothic_eregular','quartzo_demobold', sans-serif;
+    font-weight: lighter;
+    font-size: 90%;
+    letter-spacing: 2.5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+}
+.lower-filter-direct-link-container{
+    width: 11vw;
+    height: 18.25vh;
+    text-align: right;
+    right: 0;
+    /* border: 1px solid green; */
+}
+.sneaker-search-display-container{
+    width: 74.98vw;
+    height: auto;
+    /* border-left: 1px solid black; */
+    /* border: 1px solid red; */
+    padding: 0 0 0 10%;
+    display: inline-flex;
+    flex-wrap:wrap;
+}
+/* AUTO --- SNEAKER DISPLAY LISTS */
+.sneaker-list-display-container {
+    width: 14.5vw;
+    height: 40vh;
+    /* flex-wrap: wrap; */
+    border-top: .009px solid black;
+    border-right: .009px solid rgba(0, 0, 0, 0.59);
+    border-bottom: .009px solid rgba(0, 0, 0, 0.583);
+    border-left: .009px solid black;
+    /* border: 1px solid black; */
+    padding: 1%;
+}
+.sneaker-listing-text {
+    font-family: 'dharma_gothic_eregular','quartzo_demobold', sans-serif;
+    font-weight: lighter;
+    font-size: 90%;
+    letter-spacing: 2.5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-decoration: none; 
+}
+.sneaker-listing-logo-container {
+    /* z-index: 1; */
+    width: 3vw;
+    height: 6vh;
+    /* border: 1px solid red; */
+    position: absolute;
+    padding: .1%;
+    top: 0;
+    transform: translate(-24%, 52%);
+}
+.sneaker-listing-brand-container {
+    /* z-index: 1; */
+    width: 3.5vw;
+    height: 4vh;
+    /* border: 1px solid orange; */
+    /* position: absolute; */
+    padding: .1%;
+    top: 0;
+    transform: translate(0%, 0%);  
+}
+.sneaker-listing-price-container {
+    /* z-index: 1; */
+    width: 3.5vw;
+    height: 3vh;
+    /* border: 1px solid blue; */
+    /* position: absolute; */
+    padding: .1%;
+    top: 0;
+    transform: translate(99%, -134.5%);  
+}
+.sneaker-listing-name-container {
+    /* z-index: 1; */
+    width: 4.55vw;
+    height: 8vh;
+    /* border: 1px solid green; */
+    /* position: absolute; */
+    text-align: center;
+    padding: .1%;
+    top: 0;
+    transform: translate(153%, -87%);  
+}
+.sneaker-listing-buy-container {
+    /* z-index: 1; */
+    width: 2vw;
+    height: 3vh;
+    /* border: 1px solid goldenrod; */
+    /* position: absolute; */
+    text-align: center;
+    padding: .1%;
+    top: 0;
+    transform: translate(574%, -501%); 
+}
+.stock-btn-0 {
+    visibility: hidden;
+    width: 3.8vw;
+    height: 3.8vh;
+    background-color: rgb(0, 0, 0);
+    border: 2.55px solid rgb(0, 0, 0);
+    border-radius: 100% 0% 100% 0% / 31% 59% 32% 8%;
+    /* border-radius: 31% 69% 22% 78% / 82% 20% 80% 18% ; */
+    text-align: center;
+    padding: 3.5% 0 0 0;
+    font-family: 'dharma_gothic_eregular','quartzo_demobold', sans-serif;
+    font-weight: lighter;
+    font-size: 90%;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: white;
+    transform: translate(250%, -100%);
+}
+.sneaker-listing-display-image {
+    transform: translate(0%, -35%);
+    width: 14vw;
+    height: auto;
+}
+/* ------ Footer ------ */
+.footer-logo-container {
+    /* transform: translateY(15%) translateX(8%); */
+    width: 100vw;
+    height: 50vh;
+    text-align: center;
+    /* border: 1px solid rgba(255, 255, 255, 0.775); */
+}
+.footer-logo {
+    font-size: 12em;
+    font-family: 'dharma_gothic_ebold','masqueregular','quartzo_demobold', sans-serif;
+    color: rgba(255, 255, 255, 0.501);
+    letter-spacing: 5px;
+}
+
+
+/* ------ MEDIA QUERY RULER ------ */
+/* This is just a ruler at the bottom of page to view LIVE sizing of page:
+Please do not edit, this is only here to assist with designing and sizing  */
+#queryRuler {
+    /* Layout */
+    /* Position */
+    max-width: 100%;
+    text-align: center;
+    /* Background */
+    background-color: black;
+    /* Border */
+    /* Font */
+    color: white;
+}
+
+
+/* 13 LAPTOP DISPLAY */
+@media only screen and (min-width: 0px) and (max-width: 1440px) {
+    /* NAVBAR TOP*/
+    /* Font */
+    #navBar_Container {
+        /* Layout */
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 11vh;
+        /* Position */
+        position: fixed;
+        /* Background */
+        /* background-color: rgb(255, 255, 255); */
+        /* Border */
+        border-bottom: 2px solid black;
+        /* border-bottom: .25px solid rgba(255, 255, 255, 0.25); */
+        /* Font */
+    }
+    #navBar_LinkWrapperS2 {
+        /* Layout */
+        display: inline-flex;
+        column-gap: 1.5%;
+        width: 50vw;
+        height: 10.5vh;
+        /* Position */
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: translate(16.5%, -11.5%);
+        text-align: start;
+        align-items: center;
+        justify-content: start;
+        /* Background */
+        /* background-color: white; */
+        /* Border */
+        /* border: 2px dotted red; */
+        /* Font */
+    }
+    #navBar_LinkWrapperSVec {
+        /* Layout */
+        display: inline-flex;
+        column-gap: 10%;
+        padding: 1.5%;
+        width: 20vw;
+        height: 10.5vh;
+        /* Position */
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        -webkit-transform: translate(40%, -7%);
+        -moz-transform: translate(40%, -7%);
+        -ms-transform: translate(40%, -7%);
+        transform: translate(30%, -7%);
+        text-align: right;
+        /* align-items: right; */
+        /* justify-content: right; */
+        /* Background */
+        /* background-color: royalblue; */
+        /* Border */
+        /* border: 2px dotted red; */
+        /* Font */
+    }
+
+
+        /* DISPLAY CONTAINER & SHOP ALL */
+    .shop-all-header-container {
+        width: 10.2vw;
+        height: 2vh;
+        /* border: 1px solid orange; */
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: translate(80%, 9.05em);
+        text-align: left;
+    }
+    .shop-all-text {
+        font-family: 'dharma_gothic_eregular','quartzo_demobold', sans-serif;
+        font-weight: lighter;
+        font-size: 80%;
+        letter-spacing: 2.5px;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: black;
+    }
+    .selected-sneaker-display-container {
+        z-index: 1;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 75vw;
+        height: 44.5vh;
+        transform: translate(17.5%, 29.5%);
+        /* border: 1px solid black; */
+        background-color: white;
+        overflow-y: hidden ;
+    }
+    .selected-sneaker-display-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        transform: translate(75.5%, -21%);
+        width: 30vw;
+        height: auto; 
+    }
+    .lower-search-container{
+        width: 95.5vw;
+        height: 40vh;
+        /* border: 1px solid purple; */
+        /* border-top: .25px solid black; */
+        transform: translate(1.9%, 145%);
+        overflow-y: scroll;
+        padding: 1.5% 0 1.5% 0;
+        position: fixed;
+        top: 0;
+        display: flex;
+    }
+    .sneaker-search-display-container{
+        width: 74.98vw;
+        height: auto;
+        /* border: 1px solid red; */
+        display: inline-flex;
+        flex-wrap: wrap;
+    }
+    .sneaker-list-display-container {
+        width: 14.5vw;
+        height: 40vh;
+        flex-wrap: wrap;
+        border-top: .5px solid black;
+        border-right: .25px solid black;
+        border-bottom: 0px solid black;
+        border-left: .25px solid black;
+        /* border: 1px solid black; */
+        padding: 1%;
+    }
+    .navigation-left-container{
+        width: 11.3vw;
+        height: 37vh;
+        /* border: 1px solid blue; */
+        position: sticky;
+        top: -6.5%;
+        transform: translate(0%, 0em);
+        text-align: left;
+    }
+    .top-filter-text-container {
+        width: 11vw;
+        height: 3vh;
+        padding: 4% 0 0 0;
+        border: 1px solid black;
+        margin: 3.5% 0 0 0;
+        text-align: center;
+    }.top-filter-text-container:hover {
+        cursor: crosshair;
+    }
+    .top-filter-text-container-active {
+        width: 11vw;
+        height: 3vh;
+        background-color: black;
+        padding: 4%;
+        margin: 3.5% 0 0 0;
+        text-align: center;
+    }.top-filter-text-container-active:hover {
+        background-color: rgba(0, 0, 0, 0.809);
+    }
+    .top-filter-search-right-container {
+        width: 5.5vw;
+        height: 17vh;
+        /* border: 1px solid aqua; */
+        padding: 1%;
+        margin: -5.5% 0 0 0;
+    }
+    .filter-text {
+        font-family: 'dharma_gothic_eregular','quartzo_demobold', sans-serif;
+        font-weight: lighter;
+        font-size: 80%;
+        letter-spacing: 2.5px;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: black;
+    }
+    .filter-text-active {
+        font-family: 'dharma_gothic_eregular','quartzo_demobold', sans-serif;
+        font-weight: lighter;
+        font-size: 80%;
+        letter-spacing: 2.5px;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: white;
+    }
+    .sneaker-listing-text {
+        font-family: 'dharma_gothic_eregular','quartzo_demobold', sans-serif;
+        font-weight: lighter;
+        font-size: 80%;
+        letter-spacing: 2.5px;
+        text-decoration: none;
+        text-transform: uppercase;
+        text-decoration: none; 
+    }
+    .sneaker-listing-logo-container {
+        /* z-index: 1; */
+        width: 3vw;
+        height: 6vh;
+        /* border: 1px solid red; */
+        position: absolute;
+        padding: .1%;
+        top: 0;
+        transform: translate(-24%, 52%);
+    }
+    .sneaker-listing-brand-container {
+        /* z-index: 1; */
+        width: 3.8vw;
+        height: 6vh;
+        /* border: 1px solid orangered; */
+        /* position: absolute; */
+        padding: .1%;
+        text-align: center;
+        top: 0;
+        transform: translate(-10%, 1%);  
+    }
+    .sneaker-listing-price-container {
+        /* z-index: 1; */
+        width: 3.5vw;
+        height: 5vh;
+        /* border: 1px solid blue; */
+        /* position: absolute; */
+        text-align: center;
+        padding: .1%;
+        top: 0;
+        transform: translate(97%, -119%);
+    }
+    .sneaker-listing-name-container {
+        /* z-index: 1; */
+        width: 4.2vw;
+        height: 10vh;
+        /* border: 1px solid orange; */
+        /* position: absolute; */
+        text-align: center;
+        padding: .1%;
+        top: 0;
+        transform: translate(162%, -109%);
+    }
+    .sneaker-listing-buy-container {
+        /* visibility: hidden; */
+        /* z-index: 1; */
+        width: 2.5vw;
+        height: 3vh;
+        /* border: 1px solid lawngreen; */
+        /* position: absolute; */
+        text-align: center;
+        padding: .1%;
+        top: 0;
+        transform: translate(439%, -692%); 
+    }
+    .stock-btn-0 {
+        visibility: hidden;
+        width: 3.8vw;
+        height: 3.8vh;
+        background-color: rgb(0, 0, 0);
+        border: 2.55px solid rgb(0, 0, 0);
+        border-radius: 100% 0% 100% 0% / 31% 59% 32% 8%;
+        /* border-radius: 31% 69% 22% 78% / 82% 20% 80% 18% ; */
+        text-align: center;
+        padding: 3.5% 0 0 0;
+        font-family: 'dharma_gothic_eregular','quartzo_demobold', sans-serif;
+        font-weight: lighter;
+        font-size: 80%;
+        letter-spacing: 2.5px;
+        text-transform: uppercase;
+        color: white;
+        transform: translate(250%, -100%);
+    }
+    .sneaker-listing-display-image {
+        transform: translate(0%, -55%);
+        width: 14vw;
+        height: auto;
+    }
+}

@@ -1,0 +1,916 @@
+/*
+::
+::::::::::::::::::::::::::::::::::::::::::::::::
+PAGE DEFAULT SETTINGS | Please do not edit these Blocks
+::::::::::::::::::::::::::::::::::::::::::::::::
+:: 
+*/
+/* ------ Browser CSS Reset ------*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    scroll-behavior: smooth;
+}
+    /* Older Browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* ------ Page Layout Default ------ */
+html {
+    /* Layout */
+    /* scroll-padding-top: var(--top-spacing); */
+    /* Scrollbar Jumps */
+    /* margin-left: calc(100vw - 100%); */
+    /* margin-right: 0; */
+    /* Position */
+
+    /* Background */
+    background-color: white;
+    /* Border */
+    /* Font */
+}
+* {
+    /* Layout */
+    max-width: 100%;
+    /* Position */
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    box-sizing: border-box;
+    /* Background */
+    /* Border */
+    /* Font */
+}
+
+/* ------ Body Default ------ */
+body {
+    /* Layout */
+    /* Position */
+    width: 100vw;
+    height: auto;
+    /* overflow-x: hidden; */
+    /* scroll-behavior: var(--top-spacing); */
+    /* Background */
+    /* background-color: white; */
+    /* Border */
+    /* Font */
+}
+
+
+/* ------ Footer Default ------ */
+footer {
+    /* Layout */
+    /* z-index: 1; */
+    /* transform: translateY(-169%); */
+    /* Position */
+    min-width: 100vw;
+    height: 100vh;
+    /* Background */
+    background-color: black;
+    /* Border */
+    /* Font */
+}
+
+
+
+
+
+
+
+
+/*  ---------- KEYFRAMES ---------- */
+@keyframes slide-in-left { 
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-right {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-bottom {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-top {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+
+
+
+
+
+
+/*
+::
+::::::::::::::::::::::::::::::::::::::::::::::::
+------------- DEFAULT FONTS -------------------------
+::::::::::::::::::::::::::::::::::::::::::::::::
+::
+*/
+
+@font-face {
+    font-family: 'dharma_gothic_ebold','dharma_gothic_eexbold',
+                'dharma_gothic_eheavy','dharma_gothic_eregular',
+                'black_signature_personal_usRg','taken_by_vultures_demoregular',
+                'ballastregular','authenticsignature','masqueregular','porterbold_demo',
+                'quartzo_demobold','galderglynn_titlingregular',
+                'noviembre29heavy','impactregular';
+
+    src: url('dharmagothice_bold_r-webfont.woff2') format('woff2'),
+        url('dharmagothice_bold_r-webfont.woff') format('woff'),
+        url('dharmagothice_exbold_r-webfont.woff2') format('woff2'),
+        url('dharmagothice_exbold_r-webfont.woff') format('woff'),
+        url('dharmagothice_heavy_r-webfont.woff2') format('woff2'),
+        url('dharmagothice_heavy_r-webfont.woff') format('woff'),
+        url('dharmagothice_regular_r-webfont.woff2') format('woff2'),
+        url('dharmagothice_regular_r-webfont.woff') format('woff'),
+        url('blacksignature_personal_use_only-webfont.woff2') format('woff2'),
+        url('blacksignature_personal_use_only-webfont.woff') format('woff'),
+        url('taken_by_vultures_demo-webfont.woff2') format('woff2'),
+        url('taken_by_vultures_demo-webfont.woff') format('woff'),
+        url('ballast-webfont.woff2') format('woff2'),
+        url('ballast-webfont.woff') format('woff'),
+        url('authentic_signature-webfont.woff2') format('woff2'),
+        url('authentic_signature-webfont.woff') format('woff'),
+        url('masque__-webfont.woff2') format('woff2'),
+        url('masque__-webfont.woff') format('woff'),
+        url('porter_bold-webfont.woff2') format('woff2'),
+        url('porter_bold-webfont.woff') format('woff'),
+        url('quartzo__personal_use_only-webfont.woff2') format('woff2'),
+        url('quartzo__personal_use_only-webfont.woff') format('woff'),
+        url('galderglynn_titling_rg-webfont.woff2') format('woff2'),
+        url('galderglynn_titling_rg-webfont.woff') format('woff'),
+        url('noviembre29-webfont.woff2') format('woff2'),
+        url('noviembre29-webfont.woff') format('woff'),
+        url('impact-webfont.woff2') format('woff2'),
+        url('impact-webfont.woff') format('woff');
+
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+
+
+
+
+
+/*
+::
+::::::::::::::::::::::::::::::::::::::::::::::::
+------------- DEFAULT HEADER CONTAINER -------------
+::::::::::::::::::::::::::::::::::::::::::::::::
+::
+*/
+
+.header-Container {
+    /* Layout */
+    max-width: 100%;
+    height: 9.5vh;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    /* Position */
+    position: fixed;
+    /* Background */
+    /* background-color: red; */
+    /* Border */
+    /* Font */
+}
+
+/*  ------ NAVBAR CONTAINER & NAVBAR S------ */
+/* Navbar Color Options */
+
+
+
+#navBar_Container {
+    /* Layout */
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 9.5vh;
+    /* Position */
+    position: fixed;
+    /* Background */
+    background-color: rgb(255, 255, 255);
+    /* Border */
+    border-bottom: 2px solid black;
+    /* border-bottom: .25px solid rgba(255, 255, 255, 0.25); */
+    /* Font */
+}
+
+#navBar_ContainerS {
+    /* Layout */
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 5vw;
+    height: 100vh;
+    /* Position */
+    position: fixed;
+    /* Background */
+    background-color: transparent;
+    /* background-color: black; */
+    /* border-color: red; */
+    /* Border */
+    /* border-right: .25px solid rgba(255, 255, 255, 0.25); */
+    /* Font */
+}
+.navBar-ContainerS2 {
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 9.5vh;
+    /* background-color: white; */
+    /* border: 2px solid red; */
+    /* border-bottom: 2px solid black; */
+}
+
+/*  ------ NavBar Logo Container ------ */
+#logo_Container {
+    /* Layout */
+    display: inline-block;
+    width: 6.45vw;
+    height: 9.5vh;
+    /* Position */
+    position: absolute;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* Background */
+    /* background-color: transparent; */
+    /* background-color: rgb(255, 255, 255); */
+    /* border: 2px solid black */
+    /* border: .25px solid rgba(255, 255, 255, 0.25); */
+    /* Border */
+    /* Font */
+    color: white;
+
+}
+.logo-text-top-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10vw;
+    height: 4.85vw;
+    padding: 2.8%;
+}
+.logo-text-top {
+    font-family: 'dharma_gothic_eheavy','dharma_gothic_ebold','dharma_gothic_eexbold';
+    font-size: 525%;
+    color: black;
+
+} 
+.logo-long-text-container {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1vw;
+    height: 6vw;
+    padding: 8% 2% 8% 2%;
+    transform: translate(250%, 0%);
+}
+.logo-long-text-letter {
+    font-family: 'dharma_gothic_ebold','dharma_gothic_eexbold', sans-serif;
+    font-size: 155%;
+    color: black;
+
+}
+.logo-container-side {
+    /* Layout */
+    display: inline-block;
+    min-width: 100%;
+    height: 9.5vh;
+    padding: 1.5%;
+    /* Position */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* Background */
+    background-color: transparent;
+    /* Border */
+    /* Font */
+}
+.logo-text-container-side {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10vw;
+    height: 6vw;
+    padding: 3% 0 0 19%;
+    /* border: 1px solid violet; */
+}
+.logo-text-side {
+    visibility: hidden;
+    font-family: 'dharma_gothic_eheavy','dharma_gothic_ebold','dharma_gothic_eexbold';
+    font-size: 525%;
+    color: black;
+    color: white;
+}
+/*  ------ NavBar Link Container 1 ------ */
+#navBar_LinkContainer {
+    /* Layout */
+    min-width: 60%;
+    height: 6.5vh;
+    transform: translate(-50%, 35%);
+    /* Position */
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: center;
+    /* Background */
+    /* background-color: tomato; */
+    /* Border */
+    /* border: 2px dotted purple; */
+    /* Font */
+}
+
+#navBar_LinkContainer2 {
+    /* Layout */
+    min-width: 20%;
+    height: 6.5vh;
+    transform: translate(-10%, 35%);
+    /* Position */
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: center;
+    /* Background */
+    /* background-color: yellowgreen; */
+    /* Border */
+    /* border: 2px dotted purple; */
+    /* Font */
+}
+
+
+#navBar_LinkContainerS2 {
+    /* Layout */
+    width: 94.38vw;
+    height: 10.5vh;
+    transform: translate(0%, 0%);
+    /* Position */
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: start;
+    align-items: center;
+    justify-content: center;
+    /* Background */
+    /* background-color: tomato; */
+    /* Border */
+    /* border: 2px solid blue; */
+    /* Font */
+}
+
+#navBar_LinkWrapper {
+    /* Layout */
+    display: inline-flex;
+    column-gap: 5%;
+    min-width: 110%;
+    padding: 4%;
+    transform: translate(0%, -27%);
+    /* Position */
+    align-items: center;
+    justify-content: center;
+    /* Background */
+    /* background-color: paleturquoise; */
+    /* Border */
+    /* border: 2px dotted red; */
+    /* Font */
+}
+
+#navBar_LinkWrapper2 {
+    /* Layout */
+    display: inline-flex;
+    column-gap: 13%;
+    min-width: 100%;
+    padding: 9.2%;
+    transform: translate(0%, -18%);
+    /* Position */
+    align-items: center;
+    justify-content: center;
+    /* Background */
+    /* background-color: paleturquoise; */
+    /* Border */
+    /* border: 2px dotted red; */
+    /* Font */
+}
+
+#navBar_LinkWrapperS {
+    /* Layout */
+    display: flex;
+    column-gap: 0%;
+    /* min-width: 110%; */
+    padding: 5.45%;
+    /* Position */
+    transform: translate(-27.5%, -4%);
+    align-items: center;
+    justify-content: center;
+    /* Background */
+    /* background-color: paleturquoise; */
+    /* Border */
+    /* border: 2px dotted red; */
+    /* Font */
+}
+
+#navBar_LinkWrapperS2 {
+    /* Layout */
+    display: inline-flex;
+    column-gap: 1.5%;
+    width: 50vw;
+    height: 9.5vh;
+    /* Position */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translate(16.5%, -11.5%);
+    text-align: start;
+    align-items: center;
+    justify-content: start;
+    /* Background */
+    /* background-color: paleturquoise; */
+    /* Border */
+    /* border: 2px dotted red; */
+    /* Font */
+}
+
+#navBar_LinkWrapperSVec {
+    /* Layout */
+    display: inline-flex;
+    column-gap: 10%;
+    padding: 1.5%;
+    width: 20vw;
+    height: 9.5vh;
+    /* Position */
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(25%, -7%);
+    text-align: right;
+    /* align-items: right;
+    justify-content: right; */
+    /* Background */
+    /* background-color: royalblue; */
+    /* Border */
+    /* border: 2px dotted red; */
+    /* Font */
+}
+
+#navBar_LinkS3 {
+    fill: black;
+    /* fill: white; */
+}
+#navBar_LinkS3a {
+    fill: black;
+    /* fill: white; */
+}
+#navBar_LinkS3b {
+    fill: black;
+    /* fill: white; */
+}
+#navBar_LinkS3c {
+    fill: black;
+    /* fill: white; */
+}
+
+/*  ------ NavBar Links 1 ------ */
+
+.navBar_Link {
+    /* Layout */
+    /* Position */
+    /* Background */
+    /* Border */
+    /* border: 2px dotted lawngreen; */
+    /* Font */
+    font-size: 115%;
+    text-transform: uppercase;
+    font-family:'impactregular', sans-serif;
+    font-weight: normal;
+    letter-spacing: 2px;
+    text-decoration: none;
+    color: black;
+    /* color: white; */
+}
+#link-index-5 {
+    /* Layout */
+    /* Position */
+    /* Background */
+    /* Border */
+    /* border: 2px dotted lawngreen; */
+    /* Font */
+    font-size: 120%;
+    /* text-transform: uppercase; */
+    font-family:'noviembre29heavy','impactregular', sans-serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-decoration: none;
+    color: black;
+    /* color: white; */
+}
+#navBar_LinkS {
+    visibility: hidden;
+    /* Layout */
+    /* Position */
+    /* Background */
+    /* Border */
+    /* border: 2px dotted lawngreen; */
+    /* Font */
+    font-family: 'dharma_gothic_eregular','quartzo_demobold', sans-serif;
+    font-weight: lighter;
+    font-size: 90%;
+    letter-spacing: 2.5px;
+    text-decoration: none;
+    color: black;
+}
+#navBar_LinkSa {
+    visibility: hidden;
+    /* Layout */
+    /* Position */
+    /* Background */
+    /* Border */
+    /* border: 2px dotted lawngreen; */
+    /* Font */
+    font-family: 'dharma_gothic_eregular','quartzo_demobold', sans-serif;
+    font-weight: lighter;
+    font-size: 90%;
+    letter-spacing: 2.5px;
+    text-decoration: none;
+    color: black;
+}
+#navBar_LinkSb {
+    visibility: hidden;
+    /* Layout */
+    /* Position */
+    /* Background */
+    /* Border */
+    /* border: 2px dotted lawngreen; */
+    /* Font */
+    font-family: 'dharma_gothic_eregular','quartzo_demobold', sans-serif;
+    font-weight: lighter;
+    font-size: 90%;
+    letter-spacing: 2.5px;
+    text-decoration: none;
+    color: black;
+}
+#navBar_LinkSc {
+    visibility: hidden;
+    /* Layout */
+    /* Position */
+    /* Background */
+    /* Border */
+    /* border: 2px dotted lawngreen; */
+    /* Font */
+    font-family: 'dharma_gothic_eregular','quartzo_demobold', sans-serif;
+    font-weight: lighter;
+    font-size: 90%;
+    letter-spacing: 2.5px;
+    text-decoration: none;
+    color: black;
+}
+#navBar_LinkSd {
+    visibility: hidden;
+    /* Layout */
+    /* Position */
+    /* Background */
+    /* Border */
+    /* border: 2px dotted lawngreen; */
+    /* Font */
+    font-family: 'dharma_gothic_eregular','quartzo_demobold', sans-serif;
+    font-weight: lighter;
+    font-size: 90%;
+    letter-spacing: 2.5px;
+    text-decoration: none;
+    color: black;
+}
+#navBar_LinkS2 {
+
+    /* Layout */
+    /* Position */
+    /* Background */
+    /* Border */
+    /* border: 2px dotted lawngreen; */
+    /* Font */
+    font-family: 'dharma_gothic_eregular','quartzo_demobold', sans-serif;
+    font-weight: lighter;
+    font-size: 90%;
+    letter-spacing: 2.5px;
+    text-decoration: none;
+    color: black;
+    /* color: white; */
+}
+#navBar_LinkS2a {
+    /* Layout */
+    /* Position */
+    /* Background */
+    /* Border */
+    /* border: 2px dotted lawngreen; */
+    /* Font */
+    font-family: 'dharma_gothic_eregular','quartzo_demobold', sans-serif;
+    font-weight: lighter;
+    font-size: 90%;
+    letter-spacing: 2.5px;
+    text-decoration: none;
+    color: black;
+    /* color: white; */
+}
+#navBar_LinkS2b {
+    /* Layout */
+    /* Position */
+    /* Background */
+    /* Border */
+    /* border: 2px dotted lawngreen; */
+    /* Font */
+    font-family: 'dharma_gothic_eregular','quartzo_demobold', sans-serif;
+    font-weight: lighter;
+    font-size: 90%;
+    letter-spacing: 2.5px;
+    text-decoration: none;
+    color: black;
+    /* color: white; */
+}
+#navBar_LinkS3 {
+
+    /* Layout */
+    /* Position */
+    /* Background */
+    /* Border */
+    /* border: 2px dotted lawngreen; */
+    /* Font */
+    /* font-size: 95%; */
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+
+
+
+
+/*
+::
+::::::::::::::::::::::::::::::::::::::::::::::::
+------------- DEFAULT BODY CONTAINER -------------
+::::::::::::::::::::::::::::::::::::::::::::::::
+::
+*/
+/* ------ BODY CONTAINER ------ */
+
+/* ------ Footer ------ */
+.footer-logo-container {
+    /* transform: translateY(15%) translateX(8%); */
+    width: 100vw;
+    height: 50vh;
+    text-align: center;
+    /* border: 1px solid rgba(255, 255, 255, 0.775); */
+}
+.footer-logo {
+    font-size: 12em;
+    font-family: 'dharma_gothic_ebold','masqueregular','quartzo_demobold', sans-serif;
+    color: rgba(255, 255, 255, 0.501);
+    letter-spacing: 5px;
+}
+
+
+/* ------ MEDIA QUERY RULER ------ */
+/* This is just a ruler at the bottom of page to view LIVE sizing of page:
+Please do not edit, this is only here to assist with designing and sizing  */
+#queryRuler {
+    /* Layout */
+    /* Position */
+    max-width: 100%;
+    text-align: center;
+    /* Background */
+    background-color: black;
+    /* Border */
+    /* Font */
+    color: white;
+}
+
+
+
+@media only screen and (min-width: 0px) and (max-width: 1440px) {
+    /* NAVBAR TOP & SIDE */
+            #navBar_Container {
+                /* Layout */
+                z-index: 2;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 10vh;
+                /* Position */
+                position: fixed;
+                /* Background */
+                background-color: rgb(255, 255, 255);
+                /* background-color: black; */
+                /* Border */
+                border-bottom: 2px solid black;
+                /* border-bottom: .25px solid rgba(255, 255, 255, 0.25); */
+                /* Font */
+            }
+            .navBar-ContainerS2 {
+                z-index: 2;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 10.5vh;
+                /* background-color: white; */
+                /* border: 2px solid red; */
+                /* border-bottom: 2px solid black; */
+            }
+            #navBar_LinkContainerS2 {
+                /* Layout */
+                width: 94.38vw;
+                height: 10.5vh;
+                transform: translate(0%, 0%);
+                /* Position */
+                position: absolute;
+                top: 0;
+                left: 0;
+                text-align: start;
+                align-items: center;
+                justify-content: center;
+                /* Background */
+                /* Border */
+                /* border: 2px solid blue; */
+            }
+    /* Font */
+            #navBar_LinkWrapperS {
+            /* Layout */
+            display: flex;
+            column-gap: 0%;
+            /* min-width: 110%; */
+            padding: 5.45%;
+            /* Position */
+            -webkit-transform: translate(-28.5%, 12.5%);
+            -moz-transform: translate(-28.5%, 12.5%);
+            -ms-transform: translate(-28.5%, 12.5%);
+            transform: translate(-26.5%, 4.5%);
+            align-items: center;
+            justify-content: center;
+            /* Background */
+            /* Border */
+            /* border: 2px dotted red; */
+            /* Font */
+        }
+        #navBar_LinkWrapperS2 {
+            /* Layout */
+            display: inline-flex;
+            column-gap: 1.5%;
+            width: 50vw;
+            height: 10.5vh;
+            /* Position */
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transform: translate(16.5%, -11.5%);
+            text-align: start;
+            align-items: center;
+            justify-content: start;
+            /* Background */
+            background-color: white;
+            /* background-color: black; */
+            /* Border */
+            /* border: 2px dotted red; */
+            /* Font */
+        }
+        #navBar_LinkWrapperSVec {
+            /* Layout */
+            display: inline-flex;
+            column-gap: 10%;
+            padding: 1.5%;
+            width: 20vw;
+            height: 9.5vh;
+            /* Position */
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            -webkit-transform: translate(40%, -7%);
+            -moz-transform: translate(40%, -7%);
+            -ms-transform: translate(40%, -7%);
+            transform: translate(30%, -7%);
+            text-align: right;
+            /* align-items: right; */
+            /* justify-content: right; */
+            /* Background */
+            /* background-color: royalblue; */
+            /* Border */
+            /* border: 2px dotted red; */
+            /* Font */
+        }
+        #navBar_LinkS {
+            /* Layout */
+            /* Position */
+            /* Background */
+            /* Border */
+            /* border: 2px dotted lawngreen; */
+            /* Font */
+            font-family: 'dharma_gothic_eregular','quartzo_demobold';
+            font-weight: lighter;
+            font-size: 80%;
+            letter-spacing: 2.5px;
+            text-decoration: none;
+            color: black;
+            /* color: white; */
+        }
+        /* NAV LOGOS */
+        .logo-text-top-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 9.5vw;
+            height: 5.98vw;
+            padding: 2.8%;
+        }
+}
