@@ -103,13 +103,13 @@
 <body>
 <div class='root-container' id='root-container'>
     <div class='login-form-container'>
-        <form class='login-customer-form' name='input-customer-login-form' action='#' onsubmit='validateFormAll(); return false' method='post' required>
+        <form class='login-customer-form' name='input-customer-login-form' required>
 
             <div class='full-name-field-container'>
                 <div class='placeholder-container' id='full-name-placeholder-container'>
                     <span class='form-input-placeholder-text' id='full-name-placeholder-text' for='full-name'>Full Name</span>
                 </div>
-                <input name='full-name' type='text' class='form-input' id='name-input' value='' onchange='validateFormName();'>
+                <input name='full-name' type='text' class='form-input' id='name-input' value='' onchange='validateFormName();' required>
                 <div class='form-input-error' id='name-input-error-container'>
                     <span class='form-input-error-text' id='full-name-error-text'></span>
                 </div>
@@ -119,7 +119,7 @@
                 <div class='placeholder-container' id='email-placeholder-container'>
                     <span class='form-input-placeholder-text' id='email-placeholder-text' for='email'>Email</span>
                 </div>
-                <input name='email' type='email' class='form-input' id='email-input' value='' onchange='validateFormEmail();'>
+                <input name='email' type='email' class='form-input' id='email-input' value='' onchange='validateFormEmail();' required>
                 <div class='form-input-error' id='email-input-error-container'>
                     <span class='form-input-error-text' id='email-error-text'></span>
                 </div>
@@ -129,7 +129,7 @@
                 <div class='placeholder-container' id='username-placeholder-container'>
                     <span class='form-input-placeholder-text' id='username-placeholder-text' for='username'>Username</span>
                 </div>
-                <input name='username' type='text' class='form-input' id='username-input' value='' onchange='validateFormUsername();'>
+                <input name='username' type='text' class='form-input' id='username-input' value='' onchange='validateFormUsername();' required>
                 <div class='form-input-error' id='username-input-error-container'>
                     <span class='form-input-error-text' id='username-error-text'></span>
                 </div>
@@ -139,7 +139,7 @@
                 <div class='placeholder-container' id='password-placeholder-container'>
                     <span class='form-input-placeholder-text' id='password-placeholder-text' for='password'>Password</span>
                 </div>
-                <input name='password' type='password' class='form-input' id='password-input' value='' onchange='validateFormPassword();'>
+                <input name='password' type='password' class='form-input' id='password-input' value='' onchange='validateFormPassword();' required>
                 <div class='password-toggle' id='password-toggle-icon'>X</div>
                 <div class='form-input-error' id='password-input-error-container'>
                     <span class='form-input-error-text' id='password-error-text'>*Password is a required field.</span>
@@ -147,14 +147,17 @@
                 <br>
             </div>
                 <div class='customer-form-submit-container' id='submit-button-outer'>
-                    <input name='submit' type="submit" value="Submit" class='customer-form-submit-button' id='submit-button-inner'
-                        onchange='' onsubmit=''>
+                    <input name='submit' type="submit" value="Login" class='customer-form-submit-button' id='submit-button-inner'
+                        method='post' onclick='newLogin(); return false'>
                 </div>
                 <div class='customer-form-register-container' id='register-button-outer'>
                     <input name='register' type="submit" value="Create Account" class='customer-form-register-button' id='register-button-inner'
-                        onchange='' onsubmit=''>
+                    method='post' onclick="newAccount(); return false" >
                 </div>
-        </form>
+                <div class='create-account-success-container'>
+                    <span class='create-account-success-text'>Success</span>
+                </div>
+            </form>
     </div>
 
     <a href='#footer-body-container'><div class='footer-header-container'></div></a>
@@ -165,6 +168,8 @@
 
 <script src='login-window.js'></script>
 <script src='login.js'></script>
+<script src='login-login-submit.js'></script>
+<script src='login-create-account.js'></script>
 <script src='login-footer.js'></script>
 </body>
 
