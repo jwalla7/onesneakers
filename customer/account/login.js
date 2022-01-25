@@ -241,7 +241,6 @@ togglePassword.addEventListener('mousedown', (event) => {
 togglePassword.addEventListener('click', function (event) {
     const type = formPasswordField.getAttribute('type') === 'password' ? 'text' : 'password';
     formPasswordField.setAttribute('type', type);
-    this.classList.toggle('fa-eye fa-eye-slash');
 });
 
 // SUBMIT BUTTON
@@ -319,4 +318,16 @@ registerBtnText.addEventListener('keydown', (event) => {
 const validateFormName = () => {
     let nameField = document.forms["input-customer-login-form"]["full-name"].value;
     (nameField.length <= 0) ? formNameErrorMessageText.innerHTML = `*Full name is a required field` : formNameErrorMessageText.innerHTML = ``;
+};
+const validateFormEmail = () => {
+    let emailField = document.forms["input-customer-login-form"]["email"].value;
+    (emailField.length <= 0) ? formNameErrorMessageText.innerHTML = `*Email is a required field` : formNameErrorMessageText.innerHTML = ``;
+};
+const validateFormUsername = () => {
+    let usernameField = document.forms["input-customer-login-form"]["username"].value;
+    (usernameField.length <= 0) ? formNameErrorMessageText.innerHTML = `*Username is a required field` : formNameErrorMessageText.innerHTML = ``;
+};
+const validateFormPassword = () => {
+    let passwordField = document.forms["input-customer-login-form"]["password"].value;
+    (passwordField.length <= 0) ? formNameErrorMessageText.innerHTML = `*Password is a required field` : formNameErrorMessageText.innerHTML = ``;
 };
