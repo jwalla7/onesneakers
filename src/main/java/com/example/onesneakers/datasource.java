@@ -18,9 +18,9 @@
 //    public DataSource dataSource() {
 //        DriverManagerDataSource dataSource = new DriverManagerDataSource();
 //        dataSource.setDriverClassName(env.getProperty("com.mysql.cj.jdbc.Driver"));
-//        dataSource.setUrl(env.getProperty("jdbc:mysql://localhost:3306/ONESneakers?useSSL=true"));
-//        dataSource.setUsername(env.getProperty("root"));
-//        dataSource.setPassword(env.getProperty("MACjrw20148!"));
+//        dataSource.setUrl(env.getProperty(""));
+//        dataSource.setUsername(env.getProperty(""));
+//        dataSource.setPassword(env.getProperty(""));
 //        return dataSource;
 //    }
 //}
