@@ -1142,69 +1142,7 @@ CONTENT::PIXELS: Please remember to use % instead of px, Thanks!
 .adidasShow {
     z-index: 0;
     /* visibility: hidden; */
-}
-#item-beatz {
-    z-index: 0;
-    max-width: 75%;
-    height: auto;
-    transform: translate(20%, 125%);
-    position: absolute;
-    top: 0;
-    left: 0;
-    animation: fade-in 1s ease-in-out;
-}
-#item-blackpavement {
-    z-index: 0;
-    max-width: 75%;
-    height: auto;
-    transform: translate(20%, 125%);
-    position: absolute;
-    top: 0;
-    left: 0;
-    animation: fade-in 1s ease-in-out;
-}
-#item-moonboy {
-    z-index: 0;
-    max-width: 75%;
-    height: auto;
-    transform: translate(20%, 125%);
-    position: absolute;
-    top: 0;
-    left: 0;
-    animation: fade-in 1s ease-in-out;
-}
-#item-purpleFaze {
-    z-index: 0;
-    max-width: 75%;
-    height: auto;
-    transform: translate(20%, 125%);
-    position: absolute;
-    top: 0;
-    left: 0;
-    animation: fade-in 1s ease-in-out;
-}
-#item-spaceman {
-    z-index: 0;
-    max-width: 75%;
-    height: auto;
-    transform: translate(20%, 125%);
-    position: absolute;
-    top: 0;
-    left: 0;
-    animation: fade-in 1s ease-in-out;
-}
-#item-spiderweb {
-    z-index: 0;
-    max-width: 75%;
-    height: auto;
-    transform: translate(20%, 125%);
-    position: absolute;
-    top: 0;
-    left: 0;
-    animation: fade-in 1s ease-in-out;
-}
-#item-sugarcane {
-    z-index: 0;
+    -index: 0;
     max-width: 75%;
     height: auto;
     transform: translate(20%, 125%);
